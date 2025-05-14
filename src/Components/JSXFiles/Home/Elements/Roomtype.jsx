@@ -24,7 +24,7 @@ const Roomtype = () => {
       <div data-aos="fade-up" className="container">
       <h2 data-aos="fade-up" className='facilities-heading text-center'>ROOM TYPES</h2>
         {Roomvar.map((item, index) => (
-          <div className="row room_type_container_main" key={index}>
+          <div data-aos="fade-up" className="row room_type_container_main" key={index}>
             <div className="col-6 d-flex">
               <div className="txt_room_type">
                 <h2 className='Balthazar room_type_heading_main_rooms'>{item.head}</h2>
