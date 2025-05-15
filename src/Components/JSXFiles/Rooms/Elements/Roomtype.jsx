@@ -21,7 +21,7 @@ const Roomtype = () => {
             <div className="container">
             {Roomtypedetails.map((Roomtypedetail, index) => (
                 <div  key={index} data-aos="zoom-in" className='single_room room_images_type'>
-                    <img className='' src={Roomtypedetail.image} alt="image" />
+                    <img className='room_images_type_image' src={Roomtypedetail.image} alt="image" />
                     <h1 className='text-center room_details_heading'>{Roomtypedetail.head}</h1>
                     <div className="row text-center container room_images_type_container">
                         <h3 className='room_images_type_headingmin'>View Room Detail</h3>

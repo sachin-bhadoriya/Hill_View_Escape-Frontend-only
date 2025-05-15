@@ -15,26 +15,48 @@ import './App.css'
 import ScrollToTop from "./Components/JSXFiles/OtherElements/ScrollToTop";
 import NewNavbar from './Components/JSXFiles/OtherElements/NewNavbar';
 import CookieConsent from './Components/JSXFiles/OtherElements/CookieConsent';
+// import { ThemeProvider } from 'styled-components';
+// import { useState } from 'react';
 
+// const lightTheme = {
+//   background: '#fafafa',
+// };
+
+// const darkTheme = {
+//   background: '#dadada',
+// };
 
 
 const App = () => {
 
-  useEffect(() => {
-    // Disable Right Click
-    document.addEventListener('contextmenu', (e) => {
-      e.preventDefault();
-      alert("Right-click is disabled on this page!");
-    });
+  // useEffect(() => {
+  //   // Disable Right Click
+  //   document.addEventListener('contextmenu', (e) => {
+  //     e.preventDefault();
+  //     alert("Right-click is disabled on this page!");
+  //   });
 
-    // Disable F12 & Ctrl+Shift+I
-    document.onkeydown = function (e) {
-      if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
-        alert("DevTools are disabled on this page!");
-        return false;
-      }
-    };
-  }, []);
+  //   // Disable F12 & Ctrl+Shift+I
+  //   document.onkeydown = function (e) {
+  //     if (e.keyCode === 123 || (e.ctrlKey && e.shiftKey && e.keyCode === 73)) {
+  //       alert("DevTools are disabled on this page!");
+  //       return false;
+  //     }
+  //   };
+  // }, []);
+
+
+
+  // const [theme, setTheme] = useState(lightTheme);
+
+  // const toggleTheme = () => {
+  //   setTheme(theme === lightTheme ? darkTheme : lightTheme);
+  // };
+
+
+
+
+
 
 
 
@@ -45,25 +67,33 @@ const App = () => {
   useEffect(() => {
     AOS.init({
       duration: 1500,
-      once: false
+      once: false,
+      easing: 'ease-in-out',
     });
   }, []);
+
   return (
     <div className="main-page">
       <BrowserRouter>
-      <ScrollToTop />
-      <CookieConsent />
-      <NewNavbar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/Facilities" element={<Facilities />} />
-        <Route path="/Rooms" element={<Rooms />} />
-        <Route path="/Contact" element={<Contact />} />
-      </Routes>
+        {/* <ThemeProvider theme={theme}> */}
+        <ScrollToTop />
+        <CookieConsent />
+        {/* <div style={{ background: theme.background, color: theme.text, minHeight: '100vh' }}> */}
+        <NewNavbar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/Facilities" element={<Facilities />} />
+          <Route path="/Rooms" element={<Rooms />} />
+          <Route path="/Contact" element={<Contact />} />
+        </Routes>
+        {/* <button onClick={toggleTheme}>Toggle Theme</button> */}
         <Footer />
-    </BrowserRouter>
+        {/* </div> */}
+        {/* </ThemeProvider> */}
+      </BrowserRouter>
     </div>
-);
+
+  );
 };
 
 export default App;

@@ -1,19 +1,31 @@
 import React from 'react'
-import image6 from '../../../../assets/Images/inside/outside6.jpg'
 import './../../../CSSFile/ContactCSS/Contacttop.css'
+import image6 from '../../../../assets/Images/inside/outside6.jpg'
+import contact from '../../../../assets/Images/inside/contact.mp4'
 
 const Contacttop = () => {
   const style = {
-    background: `linear-gradient(rgba(26, 25, 25, 0.9), rgba(26, 25, 25, 0.1)), url(${image6})`,
+    background: `linear-gradient(rgba(26, 25, 25, 0.9), rgba(26, 25, 25, 0.1)), url(${contact})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
-    height: '50vh',
+    height: '90vh',
     width: '100%',
   };
 
   return (
     <>
-      <div data-aos="fade-up" className="Contact_top_elements" style={style}>
+      <div className="contact_top_video_container">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="contact_top_video_bg"
+        >
+          <source src={contact} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
         <span ><h2 className='contact_name_on_top'>Contact Us</h2></span>
       </div>
       <div className="container">
