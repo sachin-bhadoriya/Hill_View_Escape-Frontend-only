@@ -2,6 +2,7 @@ import React from 'react'
 import rooms_top from '../../../../assets/Images/inside/rooms_top.mp4'
 import './../../../CSSFile/RoomCSS/Roomtop.css'
 import {Link} from 'react-router-dom'
+
 const Roomtop = () => {
   return (
     <>
@@ -26,6 +27,7 @@ const Roomtop = () => {
           </div>
           <div className="home_top_btn">
            <Link to="/room-booking"><button><span>BOOK NOW</span></button></Link>
+            <button><span>BOOK NOW</span></button>
           </div>
         </div>
         <div className='container text-center'>

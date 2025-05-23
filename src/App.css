@@ -1,10 +1,10 @@
 .home_top_btn button {
     padding: 20px;
 }
-.home_top_btn button a{
+
+.home_top_btn button a {
     text-decoration: none;
     color: #ffd700;
-
 }
 
 .main-page {
@@ -12,7 +12,6 @@
 }
 
 /* top image text css  */
-
 .home_top_elements {
     position: relative;
     color: rgba(26, 25, 25, 0.1);
@@ -41,9 +40,6 @@
     color: #FFD700;
 }
 
-
-
-
 .home_top_btn {
     position: absolute;
     left: 50%;
@@ -51,9 +47,9 @@
     top: 80%;
     margin-top: 40px;
 }
+
 .home_top_btn button {
     font-family: "Nunito", sans-serif;
-    /* font-size: 1.1rem; */
     padding: 12px 28px;
     border-radius: 50px;
     border: 2px solid #f6dc49;
@@ -65,9 +61,9 @@
     overflow: hidden;
     cursor: pointer;
     transition: all 0.4s ease;
-  }
-  
-  .home_top_btn button::before {
+}
+
+.home_top_btn button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -77,27 +73,21 @@
     background: #f6dc49;
     z-index: 1;
     transition: all 0.4s ease;
-  }
-  
-  .home_top_btn button:hover::before {
-    left: 0;
-  }
-  
-  .home_top_btn button:hover {
-      box-shadow: 0 0 15px rgba(246, 220, 73, 0.8);
-      color: black !important;
-    }
+}
 
-    
-    .home_top_btn button span {
+.home_top_btn button:hover::before {
+    left: 0;
+}
+
+.home_top_btn button:hover {
+    box-shadow: 0 0 15px rgba(246, 220, 73, 0.8);
+    color: black !important;
+}
+
+.home_top_btn button span {
     position: relative;
     z-index: 2;
-  }
-  
-
-
-
-
+}
 
 .home_bottom_text {
     padding: 20px;
@@ -105,7 +95,6 @@
 
 /* Mobile Devices (max width 767px) */
 @media screen and (max-width: 767px) {
-
     .home_top_heading_size:nth-child(2),
     .home_top_heading_size:nth-child(3) {
         font-size: 7vh;

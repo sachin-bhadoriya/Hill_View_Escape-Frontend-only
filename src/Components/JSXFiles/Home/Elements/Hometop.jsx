@@ -4,6 +4,7 @@ import React from 'react'
 import facilities_top from '../../../../assets/Images/inside/facilities_top.mp4'
 import '../../../CSSFile/HomeCSS/Hometop.css'
 import {Link} from 'react-router-dom'
+
 const Hometop = () => {
   return (
     <div className="home_top_video_container">
@@ -29,6 +30,7 @@ const Hometop = () => {
         </div>
         <div className="home_top_btn">
            <Link to="/room-booking"><button><span>BOOK NOW</span></button></Link>
+          <button><span>BOOK NOW</span></button>
         </div>
       </div>
     </div>
