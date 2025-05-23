@@ -16,6 +16,8 @@ const Booking = () => {
 
   const [loading, setLoading] = useState(false);
 
+  const API = process.env.REACT_APP_API;
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm(prev => ({ ...prev, [name]: value }));
@@ -41,7 +43,7 @@ const Booking = () => {
 
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/bookings/book", form);
+      const res = await axios.post(`${API}/api/bookings/book`, form);
       alert(res.data.message);
       setForm({
         fullName: "",
