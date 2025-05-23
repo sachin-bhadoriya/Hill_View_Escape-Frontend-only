@@ -27,7 +27,6 @@ const Roomtop = () => {
           </div>
           <div className="home_top_btn">
            <Link to="/room-booking"><button><span>BOOK NOW</span></button></Link>
-            <button><span>BOOK NOW</span></button>
           </div>
         </div>
         <div className='container text-center'>
