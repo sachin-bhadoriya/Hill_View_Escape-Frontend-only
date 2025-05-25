@@ -43,7 +43,7 @@ const Booking = () => {
 
     setLoading(true);
     try {
-      const res = await axios.post(`${API}/api/bookings/book`, form);
+      const res = await axios.post(`https://hill-view-backend-1.onrender.com/api/bookings/book`, form);
       alert(res.data.message);
       setForm({
         fullName: "",
